@@ -1,0 +1,11 @@
+fastapi==0.115.11
+pandas==2.2.3
+passlib==1.7.4
+pydantic==2.10.6
+PyJWT==2.10.1
+PyJWT==2.10.1
+pymongo==4.11.3
+pytz==2025.1
+Requests==2.32.3
+streamlit==1.42.2
+typing_extensions==4.12.2

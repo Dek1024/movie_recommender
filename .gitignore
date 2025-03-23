@@ -1,0 +1,7 @@
+mongo_basics/
+Dockerfile
+app_testing.py
+app_testing.ipynb
+archive/
+database/
+__pycache__
