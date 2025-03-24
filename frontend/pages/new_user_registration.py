@@ -45,7 +45,11 @@ username = st.text_input("Username")
 password = st.text_input("Password")
 
 #st.subheader("Preferred genre") #Code must be written to limit the check box to 3
-genre_list = get_unique_genre_using_set()
+genre_list = ['Action', 'Adventure', 'Sci-Fi', 'Mystery', 'Horror', 
+              'Thriller', 'Animation', 'Comedy', 'Family', 'Fantasy', 'Drama', 
+              'Music', 'Biography', 'Romance', 'History', 'Crime', 
+              'Western', 'War', 'Musical', 'Sport', 'Drame']
+
 selected_genre = st.multiselect("Preferred_genre",genre_list,max_selections=3)
 genre_str = ""
 for genre in selected_genre:

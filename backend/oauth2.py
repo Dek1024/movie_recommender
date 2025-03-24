@@ -7,15 +7,18 @@ import module.modules
 import module.schemas
 from fastapi import Depends,status,HTTPException
 from fastapi.security import OAuth2PasswordBearer
+import os
+from dotenv import loaddotenv
+
+loaddotenv()
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="user_login")
 
-
 IST = pytz.timezone('Asia/Kolkata') 
 
-SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+SECRET_KEY = os.getenv('SECRET_KEY')
+ALGORITHM = os.getenv('ALGORITHM')
+ACCESS_TOKEN_EXPIRE_MINUTES = os.getenv('ACCESS_TOKEN_EXPIRE_MINUTES')
 
 def create_access_token(data:dict):
     to_encode = data.copy()
